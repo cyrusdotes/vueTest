@@ -22,6 +22,5 @@ deploy:
  provider: pages
  skip_cleanup: true
  github_token: $GITHUB_TOKEN
- local_dir: C:/Users/USER/vue_project
  on:
   branch: master
