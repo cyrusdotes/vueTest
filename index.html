@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/styles.css">
+	</head>
+
+  <body>
+	<!-- do not touch cp_navbar -->
+	  <div id="cp_navbar">
+      <a href="./index.html">
+        <div id="welcome">
+          <p>Welcome, Cyrus</p>
+        </div>
+      </a>
+    
+      <div id="logos">
+        <a href="./dashboard.html"><img id="db_logo" src="src/assets/dashboard_logo.png" alt="dashboard"/></a>
+          <a href="./modules.html"><img id="md_logo" src="src/assets/modules_logo.png" alt="modules"/></a>
+          <a href="./planner.html"><img id="pn_logo" src="src/assets/planner_logo.png" alt="planner"/></a>
+          <a href="./settings.html" ><img id="st_logo" src="src/assets/settings_logo.png" alt="settings"/></a>
+          <a href=""><img id="lo_logo" src="src/assets/logout_logo.png" alt="settings"/></a>
+	    </div>
+	  </div>
+
+	  <div id="index_cp_modbar">
+		  <ul>
+			  <li v-for="module in modules">
+				  <p>{{ module['.key'] + ' - ' + module.name }}</p>
+	      </li>
+	    </ul>
+	  </div>
+
+		<script src="https://unpkg.com/vue"></script>
+		<script src="https://gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+    <script>
+      var db = firebase.initializeApp({ databaseURL: "https://nusplan-e00ab.firebaseio.com/" }).database();
+      var studentRef = db.ref("student/e0176818");
+      new Vue({
+        el: "#index_cp_modbar",
+        data: {
+          sid: "e0176818"
+        },
+        firebase: {
+          student: studentRef,
+          modules: studentRef.child('modules')
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+/* do not touch the first 8 blocks */
+#cp_navbar {
+  background-color: black;
+}
+
+#welcome {
+  float: left;
+  height: 45px;
+  vertical-align: middle;
+  font-family: calibri light;
+  font-size: 15px;
+  color: white;
+  padding-left: 10px;
+}
+
+#logos {
+  text-align: right;
+  padding-right: 10px;
+}
+
+#db_logo {
+  height: 45px;
+  width: 45px;
+}
+
+#md_logo {
+  margin-bottom: 7px;
+  height: 30px;
+  width: 30px;
+}
+
+#pn_logo {
+  height: 22px;
+  width: 22px;
+  margin-bottom: 12px;
+  margin-left: 17px;
+}
+
+#st_logo {
+  height: 22px;
+  width: 22px;
+  margin-bottom: 12px;
+  margin-left: 14px;
+}
+
+#lo_logo {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+
+/* insert your styles below */
+table,
+th,
+td {
+  border: 2px solid grey;
+}
+
+#table_planner {
+  width: 80%;
+  margin-left: 20%;
+}
+tr {
+  background-color: grey;
+}
+
+#table_planner_firstRow {
+  height: 30px;
+}
+
+#table_planner_secondRow,
+#table_planner_thirdRow {
+  height: 150px;
+}
+
+#table_planner_semester {
+  width: 120px;
+}
+
+.planner_year_add {
+  background-color: grey;
+  border: 0.2px solid white;
+  font-size: 16px;
+  width: 20px;
+  float: right;
+}
+
+.planner_year_minus {
+  background-color: grey;
+  border: 0.2px solid white;
+  font-size: 16px;
+  width: 20px;
+  float: right;
+}
+
+.table_planner_semester {
+  position: relative;
+}
+.planner_sem_add {
+  background-color: grey;
+  border: 0.2px solid white;
+  font-size: 16px;
+  width: 20px;
+  position: absolute;
+  right: 50%;
+  bottom: 0%;
+}
+
+.planner_sem_minus {
+  background-color: grey;
+  border: 0.2px solid white;
+  font-size: 16px;
+  width: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+}
